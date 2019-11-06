@@ -1,0 +1,362 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/*mobile first*/
+/* add skip content link */
+a.skipcont{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -180px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+a.skipcont:focus, a.skipcont:active{
+  top:0px;
+}
+*:focus{
+  border: 2px solid black;
+}
+/*main font choices and other design stuff */
+body{
+  background-color: #ffffff;
+  font-size: 18px;
+  font-family: 'Abril Fatface', cursive;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color:#213c5c;
+}
+/*nav time */
+.navbar a:hover{
+  text-decoration: underline;
+}
+.navbar ul{
+  font-family: 'Abril Fatface', cursive;
+  list-style-type: none;
+  text-align:center;
+  border: 2px solid #a9deca;}
+/*making sure that the nav displays the current page*/
+.navbar .current{
+  color: #213c5c;;
+}
+.navbar a {
+  justify-content: center;
+  background-color: white;
+  color: #a9deca;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 17px;
+
+}
+.navbar ul{
+  font-family: 'Abril Fatface', cursive;
+  list-style-type: none;
+  text-align:center;
+}
+/*page title - adjusts for mobile so it's smaller */
+.title{
+  color: #213c5c;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  padding: 10px 0;
+}
+/*same with the footer - I adjusted the proportions*/
+.footer{
+  position:static;
+  height: 50px;
+  color:white;
+  background-color: #ebc3c7;
+
+}
+.footer p{
+    float: right;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+/*these link out to social media*/
+#fblogo{
+  float:left;
+  color: white;
+  padding: 5px;
+}
+#insta{
+  float:left;
+  color:white;
+  padding: 5px;
+}
+/*adding in the flex! the margins are adjusted for mobile*/
+
+/*landing page*/
+.flexcont{
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: center;
+    align-content: stretch;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.title{
+  flex-wrap: wrap;
+  text-align: center;
+}
+.navbar{
+  flex-wrap: wrap;
+}
+.description{
+  order:3;
+  padding: 5px;
+  font-size: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 500px;
+}
+.fallcookie{
+  order: 2;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 50%;
+  height: 50%;
+}
+/* hide the wedding picture in mobile view */
+.wedding{
+  order: 1;
+  padding: -100px;
+  width: 0px;
+}
+
+/*about page*/
+.cones{
+  width: 40%;
+  height: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0px 15px 0px;
+}
+.bakery h3, .pricing h3{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  line-height: 1;
+  padding-top: 15px;
+}
+.bakery p, .pricing p, .basic p, .premium p, .deluxe p, .other p{
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  line-height: 1.5;
+}
+.basic h4, .premium h4, .deluxe h4, .other h4{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  line-height: 1;
+  padding-top: 15px;
+  /* text-decoration: underline; */
+}
+.contactus{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  line-height: 1;
+  padding-bottom: 15px;
+}
+.contactus a{
+  color: #a9deca;
+}
+
+/*tablet media query*/
+@media screen and (min-width:500px){
+  /*adjusted title size and photo sizes for tablet view, and added in a second pic*/
+  .title{
+    font-size: 60px;
+    line-height: 1;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .wedding{
+    order: 1;
+    width: 40%;
+    padding: 10px;
+    height: 40%;
+  }
+
+  .fallcookie{
+    order: 2;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 40%;
+    padding: 10px;
+  }
+
+  .bakery h3, .pricing h3{
+  font-size: 35px;
+  }
+  .bakery p, .pricing p, .basic p, .premium p, .deluxe p, .other p{
+  font-size: 20px;
+    }
+  .basic h4, .premium h4, .deluxe h4, .other h4, .contactus a{
+    font-size: 25px;
+  }
+
+}
+
+
+/*desktop view next*/
+/*nav also looks different - it now has a border around the full menu, instead of every item*/
+/*flex margins are changed for desktop to allow for 2 photos in one row*/
+/*both images are larger, and the dog one is added back in*/
+@media screen and (min-width: 800px){
+  /*bigger font size, nav, footer, photos, etc */
+  .title{
+    font-size: 80px;
+    line-height: 1;
+    padding: 25px 0;
+    text-align: center;
+  }
+  .navbar ul{
+    text-align:center;
+    padding: 30px;
+    border: 5px solid #a9deca;
+  }
+
+  .navbar li{
+    display: inline-block;
+    }
+
+  .navbar a{
+    margin: 15px;
+    background-color: #ffffff;
+    padding-right: 30px;
+    padding-left:30px;
+    font-size: 30px;
+    border: none;
+  }
+
+  .footer{
+    position:sticky;
+    height: 100px;
+  }
+
+  .footer p{
+      float: right;
+      font-family: 'Abril Fatface', cursive;
+      font-size: 20px;
+      padding-top: 20px;
+      padding-right: 15px;
+  }
+
+  #fblogo{
+    float:left;
+    color: white;
+    padding: 10px 10px 10px 10px;
+  }
+
+  #insta{
+    float:left;
+    color:white;
+    padding: 10px 10px 15px 10px;
+  }
+
+    .flexcont{
+        list-style: none;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: stretch;
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .description{
+      order:3;
+      padding: 10px;
+      font-size: 25px;
+      text-align: center;
+      flex-wrap: wrap;
+      width: 40%;
+      height:auto;
+    }
+
+    .fallcookie{
+      order: 2;
+      flex-wrap: wrap;
+      padding: 10px;
+      width: 40%;
+      height: 40%;
+    }
+    .wedding{
+      order: 1;
+      padding: 10px;
+      flex-wrap: wrap;
+      width: 40%;
+      height:40%;
+    }
+    .cones{
+    width:30%;
+    height: 30%;
+  }
+
+  .bakery h3, .pricing h3{
+  font-size: 50px;
+  }
+  .bakery p, .pricing p, .basic p, .premium p, .deluxe p, .other p{
+  font-size: 25px;
+  padding-bottom: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+    }
+  .basic h4, .premium h4, .deluxe h4, .other h4, .contactus a{
+    font-size: 30px;
+    padding-top: 5px;
+  }
+  .contactus{
+    font-size: 30px;
+  }
+  }
+
+/*media query for reduced motion*/
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none;
+    transition: none;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
