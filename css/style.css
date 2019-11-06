@@ -38,7 +38,7 @@ body{
   font-family: 'Abril Fatface', cursive;
   list-style-type: none;
   text-align:center;
-  border: 2px solid #a9deca;}
+  border: 2px solid #8ab8a6;}
 /*making sure that the nav displays the current page*/
 .navbar .current{
   color: #213c5c;;
@@ -46,7 +46,7 @@ body{
 .navbar a {
   justify-content: center;
   background-color: white;
-  color: #a9deca;
+  color: #8ab8a6;
   display: block;
   padding: 5px;
   text-decoration: none;
@@ -73,7 +73,7 @@ body{
   position:static;
   height: 50px;
   color:white;
-  background-color: #ebc3c7;
+  background-color: #c79398;
 
 }
 .footer p{
@@ -179,7 +179,7 @@ body{
   padding-bottom: 15px;
 }
 .contactus a{
-  color: #a9deca;
+  color: #8ab8a6;
 }
 
 /*tablet media query*/
@@ -235,7 +235,7 @@ body{
   .navbar ul{
     text-align:center;
     padding: 30px;
-    border: 5px solid #a9deca;
+    border: 5px solid #8ab8a6;
   }
 
   .navbar li{
@@ -308,6 +308,7 @@ body{
       padding: 10px;
       width: 40%;
       height: 40%;
+      border-radius: 15px;
     }
     .wedding{
       order: 1;
