@@ -1,7 +1,6 @@
 html{
     scroll-behavior: smooth;
 }
-
 /*mobile first*/
 /* add skip content link */
 a.skipcont{
@@ -31,6 +30,9 @@ body{
   color:#213c5c;
 }
 /*nav time */
+.navbar li{
+  color: #213c5c
+}
 .navbar a:hover{
   text-decoration: underline;
 }
@@ -38,35 +40,43 @@ body{
   font-family: 'Abril Fatface', cursive;
   list-style-type: none;
   text-align:center;
-  border: 2px solid #8ab8a6;}
+  background-color: white;
+  border: 2px solid #8ab8a6;
+  border-radius: 15px;
+  margin: 0px 20px 0px 20px}
 /*making sure that the nav displays the current page*/
 .navbar .current{
   color: #213c5c;;
 }
 .navbar a {
   justify-content: center;
-  background-color: white;
-  color: #8ab8a6;
+  color:#8ab8a6;
   display: block;
-  padding: 5px;
   text-decoration: none;
   margin: 5px;
-  font-size: 17px;
+  font-size: 15px;
+  padding: 5px;
 
-}
-.navbar ul{
-  font-family: 'Abril Fatface', cursive;
-  list-style-type: none;
-  text-align:center;
 }
 /*page title - adjusts for mobile so it's smaller */
 .title{
   color: #213c5c;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1;
   text-align: center;
   font-family: 'Pacifico', cursive;
   padding: 10px 0;
+  letter-spacing: 5px;
+  /*the next effect is adapted from code written by ThatGuySam and shared on https://cssnewbie.com/10-beautiful-css-text-effects/#.XcTVBZNKjBL*/
+  text-shadow:
+    0 1px 0 #89ade0,
+    0 2px 0 #213c5c,
+    0 3px 0 #213c5c,
+    0 4px 0 #213c5c,
+    0 5px 0 #213c5c,
+    0 5px 7px rgba(0,0,0,.1),
+    0 7px 7px rgba(0,0,0,.1),
+    0 15px 15px rgba(0,0,0,.1);
 }
 /*same with the footer - I adjusted the proportions*/
 .footer{
@@ -94,9 +104,9 @@ body{
   color:white;
   padding: 5px;
 }
-/*adding in the flex! the margins are adjusted for mobile*/
 
 /*landing page*/
+/*adding in the flex! the margins are adjusted for mobile*/
 .flexcont{
     list-style: none;
     display: -webkit-box;
@@ -125,43 +135,127 @@ body{
   font-size: 10px;
   text-align: center;
   flex-wrap: wrap;
-  width: 500px;
+  width: 70%;
 }
 .fallcookie{
   order: 2;
   flex-wrap: wrap;
   padding: 10px;
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
+  border-radius: 30px;
 }
-/* hide the wedding picture in mobile view */
 .wedding{
+  /* hide the wedding picture in mobile view */
   order: 1;
   padding: -100px;
   width: 0px;
 }
 
 /*about page*/
-.cones{
-  width: 40%;
-  height: 40%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px 0px 15px 0px;
+/*using grid for this one*/
+#about .navbar ul{
+  border: none;
 }
-.bakery h3, .pricing h3{
+.gridcontainerabout{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: stretch;
+}
+.bakery {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 0px 0px 0px 0px;
+  order: 1;
+}
+.loonfifty{
+  order: 3;
+  background-image: url('../images/loonfifty.jpg');
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  object-fit:contain;
+  width:99.5%;
+  height:300px;
+  background-repeat:no-repeat;
+  background-size: cover;
+
+}
+.pricing{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 30px 0px 30px 0px;
+  order: 4;
+}
+.bakery h3{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    line-height: 1;
+    padding-top: 15px;
+    color:#213c5c;
+    letter-spacing: 4px;
+}
+.pricing h3{
   font-size: 30px;
   text-align: center;
   font-family: 'Pacifico', cursive;
   line-height: 1;
-  padding-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  letter-spacing: 1.5px;
 }
-.bakery p, .pricing p, .basic p, .premium p, .deluxe p, .other p{
+.bakery p{
   font-size: 15px;
   padding: 10px 10px 10px 10px;
   text-align: center;
   line-height: 1.5;
+  color:#213c5c;
+  letter-spacing: 1.25px;
+}
+.basic{
+  background: #db5351;
+  color: white;
+  order:5;
+}
+.premium{
+  background: #f2f2f0;
+  order:6;
+}
+.deluxe{
+  background:#f2f2f0;
+  vertical-align: middle;
+  order:7;
+}
+.other{
+  background:#f05638;
+  color: white;
+  vertical-align: middle;
+  order: 8;
+}
+.contactus{
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  line-height: 1;
+  padding: 20px 10px 30px 10px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color:#213c5c;
+  letter-spacing: 1.5px;
+  order:2;
+}
+.contactus a{
+  text-decoration: underline;
+  color: #c79398;
+}
+.pricing p, .basic p, .premium p, .deluxe p, .other p{
+  font-size: 15px;
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 1.25px;
+  vertical-align: middle;
 }
 .basic h4, .premium h4, .deluxe h4, .other h4{
   font-size: 20px;
@@ -169,73 +263,372 @@ body{
   font-family: 'Abril Fatface', cursive;
   line-height: 1;
   padding-top: 15px;
-  /* text-decoration: underline; */
+  letter-spacing: 1.5px;
 }
-.contactus{
-  font-size: 20px;
+
+/*gallery page*/
+.ourcookies{
+  font-size: 30px;
   text-align: center;
   font-family: 'Pacifico', cursive;
   line-height: 1;
-  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  color:#213c5c;
+  letter-spacing: 4px;
 }
-.contactus a{
-  color: #8ab8a6;
+.sampling{
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.5;
+  color:#213c5c;
+  letter-spacing: 1px;
+  padding: 0px, 10px, 15px, 10px;
 }
+
+/*navbar for gallery*/
+.gallerynav li{
+  background-color: #c79398;
+  padding: 5px 0px 5px 0px;
+
+}
+.gallerynav a:hover{
+  text-decoration: underline;
+}
+.gallerynav ul{
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  list-style-type: none;
+}
+.gallerynav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;}
+
+/*making gallery grid(s)*/
+/*grid is 2 columns for mobile and tablet*/
+/*augmented photo gallery using pseudoclasses - was inspired by https://codepen.io/linux/pen/gxgWQy (by Omar Dsoky) and https://codepen.io/TiagoLopes/pen/vZBMWB (by Tiago Alexandre Lopes)*/
+.gallery img{
+  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+  transition: transform .2s;
+  border-radius: 15px;
+}
+.gallery img:hover{
+  /* transform: scale(1.75,1.75); */
+  transform: scale(1.2, 1.2);
+  z-index: 9;
+}
+.schoolcookies{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1%;
+  grid-column-gap: 3%;
+  z-index: auto;
+  overflow:hidden;
+  margin: 20px 20px 20px 20px;
+
+}
+.schoolcookies img{
+  object-fit: contain;
+  justify-content: center;
+  width:90%;
+  height:auto;
+  overflow: hidden;
+  z-index: auto;
+  margin:20px,20px,20px,20px;
+}
+.schoolheading, .eventheading, .seasonalheading, .birthdayheading, .animalheading, .mischeading{
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  line-height: 1;
+  padding-top: 55px;
+  padding-bottom: 10px;
+  color:#213c5c;
+  letter-spacing: 1.5px;
+
+}
+.eventcookies{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1%;
+  grid-column-gap: 3%;
+  z-index: auto;
+  margin: 20px 20px 20px 20px;
+  overflow:hidden;
+}
+.eventcookies img{
+  object-fit: fill;
+  justify-content: center;
+  width:90%;
+  height:auto;
+  overflow: hidden;
+
+
+}
+.seasonalcookies{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr;
+  z-index: auto;
+  grid-row-gap: 1%;
+  grid-column-gap: 3%;
+  margin: 20px 20px 20px 20px;
+  overflow:hidden;
+}
+.seasonalcookies img{
+  object-fit: fill;
+  justify-content: center;
+  width:90%;
+  height:auto;
+  overflow: hidden;
+}
+.birthdaycookies{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr ;
+  grid-row-gap: 1%;
+  grid-column-gap: 3%;
+  z-index: auto;
+  margin: 20px 20px 20px 20px;
+  overflow:hidden;
+}
+.birthdaycookies img{
+  object-fit: fill;
+  justify-content: center;
+  width:90%;
+  height:auto;
+  overflow: hidden;
+}
+.animalcookies{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  z-index: auto;
+  grid-row-gap: 1%;
+  grid-column-gap: 3%;
+  margin: 20px 20px 20px 20px;
+  overflow:hidden;
+}
+.animalcookies img{
+  object-fit: fill;
+  justify-content: center;
+  width:100%;
+  height:auto;
+  overflow: hidden;
+}
+.misccookies{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1%;
+  grid-column-gap: 3%;
+  z-index: auto;
+  margin: 20px 20px 20px 20px;
+  overflow:hidden;
+
+}
+.misccookies img{
+  object-fit: fill;
+  justify-content: center;
+  width:100%;
+  height:auto;
+  overflow: hidden;
+}
+
+
+/*last page! contact and FAQ*/
+
+.faqtitle{
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  line-height: 1;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  color:#213c5c;
+  letter-spacing: 3px;
+  text-decoration: underline;
+}
+.faqquestions{
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  line-height: 1;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color:#8ab8a6;
+  letter-spacing: 1.5px;
+
+}
+.faqanswer{
+  font-size: 20px;
+  text-align: center;
+  padding-right: 20px;
+  padding-left:20px;
+}
+.faq{
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.bluebird{
+  width:100%;
+  height:40%;
+  opacity:.9;
+
+}
+.ordertext{
+  font-size: 22px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left:20px;
+}
+.form, .ordertext{
+    background-color: #f2f2f0;
+}
+.name, .email, .questions{
+  font-size: 20px;
+  margin-left: 10px;
+}
+.nameinput, .emailinput{
+  border: 2px solid #213c5c;
+  width:90%;
+  height:20px;
+  margin: 5px 30px 5px 10px;
+  font-size: 15px;
+}
+.questionsinput{
+  width:90%;
+  height:40px;
+  border: 2px solid #213c5c;
+  margin: 5px 30px 5px 10px;
+}
+
+.submit{
+  background-color:#213c5c;
+  color:white;
+  font-family: 'Pacifico', cursive;
+  padding: 5px 20px 5px 20px;
+  margin: 10px 10px 10px 20px;
+  font-size:20px;
+}
+
 
 /*tablet media query*/
 @media screen and (min-width:500px){
-  /*adjusted title size and photo sizes for tablet view, and added in a second pic*/
+  /*adjusted title size and photo sizes for tablet view, and added in a second pic on landing page*/
   .title{
     font-size: 60px;
     line-height: 1;
     padding: 20px 0;
     text-align: center;
+    letter-spacing: 3px;
   }
-
   .wedding{
     order: 1;
     width: 40%;
     padding: 10px;
     height: 40%;
+    border-radius: 30px;
   }
-
   .fallcookie{
     order: 2;
     flex-wrap: wrap;
     width: 40%;
     height: 40%;
     padding: 10px;
+    border-radius: 30px;
   }
-
+  /*adjusted font sizes for about page*/
   .bakery h3, .pricing h3{
-  font-size: 35px;
+    font-size: 35px;
   }
   .bakery p, .pricing p, .basic p, .premium p, .deluxe p, .other p{
-  font-size: 20px;
+    font-size: 20px;
     }
   .basic h4, .premium h4, .deluxe h4, .other h4, .contactus a{
     font-size: 25px;
   }
-
-}
+  .navbar ul{
+   margin: 0px 0px 0px 0px;}
+  /*adjusted order of grid elements on the tablet view*/
+  .bakery{
+    order:1;
+    }
+  .loonfifty{
+    order:2;
+  }
+  .pricing{
+      order:3;
+      height: 175px;
+      padding-top:30px;
+    }
+  .basic{
+    order: 4;
+  }
+  .deluxe{
+    order:5;
+  }
+  .premium{
+    order:6;
+  }
+  .other{
+    order:7;
+  }
+  .contactus{
+    order:8;}
+ /*changed text sizes for tablet mode*/
+  .schoolheading, .eventheading, .seasonalheading, .birthdayheading, .animalheading, .mischeading{
+    font-size: 35px;
+    }
+  .ourcookies{
+      font-size: 40px;
+    }
+  .sampling{
+      font-size: 25px;
+    }
+  .faqtitle{
+    font-size:40px
+    }
+  .faqquestions{
+    font-size: 30px;
+  }
+  .faqanswers{
+    font-size: 25px;
+  }
+  .ordertext{
+    font-size:28px;
+  }
+  .name, .email, .questions{
+    font-size: 20px;
+  }
 
 
 /*desktop view next*/
-/*nav also looks different - it now has a border around the full menu, instead of every item*/
-/*flex margins are changed for desktop to allow for 2 photos in one row*/
-/*both images are larger, and the dog one is added back in*/
+/*nav looks different - it now has a border around the full menu, instead of every item*/
+/* landing page flex margins are changed for desktop to allow for 2 photos in one row*/
+/*both landing page images are larger, and the dog one is added back in*/
 @media screen and (min-width: 800px){
   /*bigger font size, nav, footer, photos, etc */
+  /*nav changes border radius, margins, and size*/
   .title{
     font-size: 80px;
     line-height: 1;
     padding: 25px 0;
     text-align: center;
+    letter-spacing: 3px;
   }
   .navbar ul{
     text-align:center;
     padding: 30px;
     border: 5px solid #8ab8a6;
+    margin: 0px 0px 0px 0px;
+    border-radius: 0px;
   }
 
   .navbar li{
@@ -244,7 +637,6 @@ body{
 
   .navbar a{
     margin: 15px;
-    background-color: #ffffff;
     padding-right: 30px;
     padding-left:30px;
     font-size: 30px;
@@ -276,7 +668,7 @@ body{
     padding: 10px 10px 15px 10px;
   }
 
-    .flexcont{
+  .flexcont{
         list-style: none;
         display: -webkit-box;
         display: -moz-box;
@@ -291,55 +683,204 @@ body{
         margin-top: 20px;
         margin-bottom: 20px;
     }
-
-    .description{
+  .description{
       order:3;
       padding: 10px;
       font-size: 25px;
       text-align: center;
       flex-wrap: wrap;
-      width: 40%;
+      width: 80%;
       height:auto;
-    }
 
-    .fallcookie{
-      order: 2;
-      flex-wrap: wrap;
-      padding: 10px;
-      width: 40%;
-      height: 40%;
-      border-radius: 15px;
     }
-    .wedding{
+  .fallcookie{
+    order: 2;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 40%;
+    height: 40%;
+    border-radius: 30px;
+    }
+  .wedding{
       order: 1;
       padding: 10px;
       flex-wrap: wrap;
       width: 40%;
       height:40%;
+      border-radius: 30px;
     }
-    .cones{
-    width:30%;
-    height: 30%;
-  }
-
   .bakery h3, .pricing h3{
-  font-size: 50px;
-  }
-  .bakery p, .pricing p, .basic p, .premium p, .deluxe p, .other p{
-  font-size: 25px;
-  padding-bottom: 15px;
-  margin-left: 10%;
-  margin-right: 10%;
+    font-size: 50px;
     }
+  .bakery p, .pricing p, .basic p, .premium p, .deluxe p, .other p{
+    font-size: 25px;
+    padding-bottom: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   .basic h4, .premium h4, .deluxe h4, .other h4, .contactus a{
     font-size: 30px;
     padding-top: 5px;
   }
   .contactus{
     font-size: 30px;
+    color:#213c5c;
+    background:none;
+    }
+    .contactus a{
+      color: #c79398;
+    }
+
+    /*adjusted row heights on the following for desktop*/
+  .basic, .premium, .deluxe, .other{
+    height: 250px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
+  .loonfifty{
+    height: 500px;
+  }
+  .ourcookies{
+    font-size: 50px;
+  }
+  .sampling{
+    font-size: 30px;
+    padding-bottom: 20px;
+
+  }
+  /*navbar for gallery*/
+  .gallerynav a {
+      color: white;
+      text-decoration: none;
+      font-size: 25px;
+      padding: 10px 20px 10px 20px;
+    }
+  .schoolcookies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 2%;
+    grid-column-gap: 1%;
+    padding-bottom: 100px;
+  }
+  .schoolheading, .eventheading, .seasonalheading, .birthdayheading, .animalheading, .mischeading{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    line-height: 1;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    color:#213c5c;
+    letter-spacing: 1.5px;
+
+  }
+  .eventcookies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 4%;
+    grid-column-gap: 2%;
+    padding-bottom: 100px;
+
+  }
+  .eventcookies img{
+    width:100%;
+
+
+  }
+  .seasonalcookies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 1%;
+    grid-column-gap: 2%;
+    padding-bottom: 100px;
+  }
+  .seasonalcookies img{
+    width:100%;
+  }
+  .birthdaycookies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 1%;
+    grid-column-gap: 3%;
+    padding-bottom: 100px;
+  }
+  .birthdaycookies img{
+    object-fit: fill;
+    justify-content: center;
+    width:100%;
+    height:auto;
+    overflow: hidden;
+  }
+  .animalcookies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 2%;
+    grid-column-gap: 1%;
+    padding-bottom: 100px;
+  }
+  .animalcookies img{
+
+    width:100%;
+
+  }
+  .misccookies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 2%;
+    grid-column-gap: 3%;
+    margin: 20px 20px 20px 20px;
+    padding-bottom: 100px;
+
+  }
+  .misccookies img{
+    object-fit: fill;
+    justify-content: center;
+    width:100%;
+    height:auto;
+    overflow: hidden;
   }
 
+
+  .faqtitle{
+    font-size:50px
+    }
+  .faqquestions{
+    font-size: 40px;
+  }
+  .faqanswer{
+    font-size:30px;
+
+  }
+  .ordertext{
+    font-size:38px;
+  }
+  .name, .email, .questions{
+    font-size: 30px;
+  }
+  .nameinput, .emailinput{
+    border: 2px solid #213c5c;
+    width:90%;
+    height:25px;
+    margin: 5px 30px 5px 10px;
+    font-size: 20px;
+  }
+  .questionsinput{
+    width:90%;
+    height:50px;
+    border: 2px solid #213c5c;
+    margin: 5px 30px 5px 10px;
+    font-size:20px;
+  }
+  .submit{
+    padding: 5px 35px 5px 35px;
+    margin: 15px 15px 15px 25px;
+    font-size:30px;
+  }
 /*media query for reduced motion*/
 @media screen and (prefers-reduced-motion: reduce){
   html{

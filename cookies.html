@@ -2,75 +2,112 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <title> Big Sugar Sweets</title>
     <script src="https://kit.fontawesome.com/6ced75be87.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <h1>Big Sugar Sweets</h1>
-    <nav>
+  <body id="ourcookies">
+    <h1 class="title"> Big Sugar Sweets</h1>
+    <a class="skipcont" href="#skip">Skip to Main Content</a>
+    <nav class="navbar">
       <ul>
         <li> <a href="index.html">Home </a> </li>
         <li> <a href="about.html"> About Big Sugar </a> </li>
-        <li> <a href="cookies.html"> Our Cookies </a></li>
+        <li> <a class= current href="cookies.html"> Our Cookies </a></li>
         <li> <a href="contact.html"> Contact and FAQ </a> </li>
       </ul>
     </nav>
-    <h1>Our Cookies</h1>
-      <h2>Take a look at a sampling of our many custom designs!</h2>
+    <h1 id="skip" class="ourcookies">Our Cookies</h1>
+      <h2 class="sampling">Take a look at a sampling of our many custom designs!</h2>
+    <nav class="gallerynav">
+        <ul>
+          <li> <a href=#school>School Cookies</a></li>
+          <li> <a href="#event">Event Cookies</a></li>
+          <li> <a href="#seasonal">Seasonal Cookies</a></li>
+          <li> <a href="#birthday">Birthday Cookies</a></li>
+          <li> <a href="#animal">Animal Cookies</a></li>
+          <li> <a href="#misc">Miscellaneous Cookies</a></li>
+        </ul>
+      </nav>
     <div class="gallery">
-    <img src="images/jkp.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/pets.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/traintwo.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/uc.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/tubtub.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/holidaydoor.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/harvard.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/guitar.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/leaf.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/poohone.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/weddingcookie.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/train.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/baseball.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/pooh.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/silhouette.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/animals.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/cones.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/heartdonut.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/holidaycar.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/horse.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/lion.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/mb.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/elmo.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/horsetwo.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/loon.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/engagementring.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/golf.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/guitarpick.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/pencils.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/uctwo.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/mask.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/ontario.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/bluebirds.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/guitars.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/sombrero.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/elephant.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/waffle.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/fiestatwo.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/akron.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/golftwo.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/ring.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/fiesta.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/pinata.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/puppy.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/may.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/osu.jpg" alt="bee cookies" width="500" height="400">
-    <img src="images/pencisltwo.jpg" alt="bee cookies" width="500" height="400">
+      <h2 class="schoolheading" id="school">School and College Cookies</h2>
+      <div class="schoolcookies" >
+        <img src="images/uc.jpg" alt="University of Cinncinatti cookies" class='uc'>
+        <img src="images/harvard.jpg" alt="Harvard cookies" class='harvard' >
+        <img src="images/pencils.jpg" alt="pencil cookies" class="pencil">
+        <img src="images/uctwo.jpg" alt="University of Cinncinnatti school cookies" class="uctwo">
+        <img src="images/akron.jpg" alt="University of Akron cookies" class="akron">
+        <img src="images/osu.jpg" alt="Ohio State cookies" class='osu' >
+        <img src="images/bball.jpg" alt="Allegheny College basketball cookies" class="allegheny">
+        <img src="images/pencisltwo.jpg" alt="back to school pencil cookies" class="bts">
+      </div>
+
+      <h2 class="eventheading" id='event'>Event Cookies</h2>
+      <div class="eventcookies">
+        <img src="images/horse.jpg" alt="horse silhouette cookies" class="horsesil">
+        <img src="images/mb.jpg" alt="M and B initial cookies" class="mb">
+        <img src="images/enagementring.jpg" alt="engagement ring cookie" class="engagement">
+        <img src="images/mask.jpg" alt="masquerade cookies" class='masquerade'>
+        <img src="images/guitars.jpg" alt="guitar cookies" class='guitar'>
+        <img src="images/sombrero.jpg" alt="sombrero cookies" class="sombrero">
+        <img src="images/fiestatwo.jpg" alt="fiesta cookies" class="fiesta">
+        <img src="images/ring.jpg" alt="engagement ring cookies" class="engagementtwo">
+        <img src="images/fiesta.jpg" alt="cinco de mayo cookies" class="cinco">
+        <img src="images/pinata.jpg" alt="piñata cookies" class="pin">
+      </div>
+
+      <h2 class='seasonalheading'id= "seasonal" >Seasonal Cookies</h2>
+      <div class= "seasonalcookies">
+        <img src="images/tubtub.jpg" alt="fall dog cookies" >
+        <img src="images/holidaydoor.jpg" alt="holiday door cookies" >
+        <img src="images/leaf.jpg" alt="autumn leaves cookies" >
+        <img src="images/holidaycar.jpg" alt="a car with a Christmas tree on top cookies" >
+        <img src="images/may.jpg" alt="May flower cookies" >
+      </div>
+
+      <h2 class="birthdayheading" id="birthday">Birthday Cookies</h2>
+      <div class="birthdaycookies">
+        <img src="images/train.jpg" alt="train cookies" >
+        <img src="images/poohone.jpg" alt="Winnie the Pooh cookies" >
+        <img src="images/pooh.jpg" alt="Pooh cookies" >
+        <img src="images/elmo.jpg" alt="elmo from sesame street cookies" >
+      </div>
+
+      <h2 class="animalheading" id="animal">Animal Cookies</h2>
+      <div class="animalcookies">
+        <img src="images/pets.jpg" alt="cookies of pets">
+        <img src="images/animals.jpg" alt="zoo animals cookies" >
+        <img src="images/horse.jpg" alt="horse silhouette cookies" >
+        <img src="images/lion.jpg" alt="cute lion cookies" >
+        <img src="images/horsetwo.jpg" alt="horses cookies" >
+        <img src="images/bluebirds.jpg" alt="bluebird cookies" >
+        <img src="images/elephant.jpg" alt="elephant cookies" >
+        <img src="images/puppy.jpg" alt="puppy cookies" >
+      </div>
+
+      <h2 class="mischeading" id="misc">Miscellaneous Cookies</h2>
+      <div class="misccookies">
+        <img src="images/jkp.jpg" alt="initial cookies with JKP">
+        <img src="images/guitar.jpg" alt="bee cookies" >
+        <img src="images/silhouette.jpg" alt="women's silhouette cookies" >
+        <img src="images/cones.jpg" alt="ice cream cone cookies" >
+        <img src="images/heartdonut.jpg" alt="donut and a heart cookies" >
+        <img src="images/golf.jpg" alt="golfcourse cookies" >
+        <img src="images/guitarpick.jpg" alt="guitarpick cookies" >
+        <img src="images/guitar.jpg" alt="guitar cookies" >
+        <img src="images/waffle.jpg" alt="waffle cookies" >
+        <img src="images/golftwo.jpg" alt="Golfcourse cookies" >
+      </div>
 
     </div>
-    <footer>
+    <footer class="footer">
       <p> Site Developed by Julia Maxwell for SI 539 </p>
-      <a href = https://www.facebook.com/bigsugarsweets> <span> <i class="fab fa-facebook-square fa-4x"></i></span> </a>
-      <a href = https://www.instagram.com/bigsugarsweets/> <span> <i class= "fab fa-instagram fa-4x" ></i></span> </a>
+      <a id="fblogo" href = https://www.facebook.com/bigsugarsweets> <span> <i class="fab fa-facebook-square fa-m" aria-hidden="true" aria-label="facebook link"></i></span> </a>
+      <a id= "insta" href = https://www.instagram.com/bigsugarsweets/> <span> <i class= "fab fa-instagram fa-m" aria-hidden="true" aria-label="instagram link"></i> </span> </a>
     </footer>
   </body>
 </html>
