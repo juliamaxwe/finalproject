@@ -93,12 +93,13 @@ body{
     font-size: 10px;
     padding-top: 10px;
     padding-right: 10px;
+    color:white;
 
 }
 
 .footer a{
   color:white;
-  text-decoration: underline;  
+  text-decoration: underline;
 }
 /*these link out to social media*/
 #fblogo{
