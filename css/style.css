@@ -41,16 +41,17 @@ body{
   list-style-type: none;
   text-align:center;
   background-color: white;
-  border: 2px solid #8ab8a6;
+  border: 2px solid #4E7E76;
   border-radius: 15px;
   margin: 0px 20px 0px 20px}
 /*making sure that the nav displays the current page*/
 .navbar .current{
-  color: #213c5c;;
+  color: #213c5c;
+  text-decoration:underline;
 }
 .navbar a {
   justify-content: center;
-  color:#8ab8a6;
+  color:#4E7E76;
   display: block;
   text-decoration: none;
   margin: 5px;
@@ -83,7 +84,7 @@ body{
   position:static;
   height: 50px;
   color:white;
-  background-color: #c79398;
+  background-color: #AD5C5F;
 
 }
 .footer p{
@@ -247,7 +248,7 @@ body{
 }
 .contactus a{
   text-decoration: underline;
-  color: #c79398;
+  color: #AD5C5F;
 }
 .pricing p, .basic p, .premium p, .deluxe p, .other p{
   font-size: 15px;
@@ -288,7 +289,7 @@ body{
 
 /*navbar for gallery*/
 .gallerynav li{
-  background-color: #c79398;
+  background-color: #AD5C5F;
   padding: 5px 0px 5px 0px;
 
 }
@@ -460,7 +461,7 @@ body{
   line-height: 1;
   padding-top: 40px;
   padding-bottom: 20px;
-  color:#8ab8a6;
+  color:#4E7E76;
   letter-spacing: 1.5px;
 
 }
@@ -624,9 +625,9 @@ body{
     letter-spacing: 3px;
   }
   .navbar ul{
+    border: 5px solid #4E7E76;
     text-align:center;
     padding: 30px;
-    border: 5px solid #8ab8a6;
     margin: 0px 0px 0px 0px;
     border-radius: 0px;
   }
@@ -728,7 +729,7 @@ body{
     background:none;
     }
     .contactus a{
-      color: #c79398;
+      color: #AD5C5F;
     }
 
     /*adjusted row heights on the following for desktop*/
@@ -857,7 +858,7 @@ body{
 
   }
   .ordertext{
-    font-size:38px;
+    font-size:34px;
   }
   .name, .email, .questions{
     font-size: 30px;
