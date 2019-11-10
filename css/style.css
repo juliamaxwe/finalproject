@@ -98,6 +98,7 @@ body{
 
 .footer a{
   color:white;
+  text-decoration: underline;  
 }
 /*these link out to social media*/
 #fblogo{
