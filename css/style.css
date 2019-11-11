@@ -1,3 +1,7 @@
+/* SI 539 Portfolio by Julia Maxwell
+all code is my own except where noted/cited*/
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -12,7 +16,7 @@ a.skipcont{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-}
+} /* skip content link adapted from from homework assignments*/
 a.skipcont:focus, a.skipcont:active{
   top:0px;
 }
@@ -43,7 +47,7 @@ body{
   background-color: white;
   margin: 0px 20px 0px 20px
 }
-/*making sure that the nav displays the current page*/
+/*making sure that the nav displays the current page. recieved help figuring out how to do this in discussion section from GSI and classmates*/
 .navbar .current{
   text-decoration: underline;
   color: #213c5c
@@ -67,6 +71,7 @@ body{
   font-family: 'Pacifico', cursive;
   padding: 10px 0;
   letter-spacing: 5px;
+
   /*the next effect is adapted from code written by ThatGuySam and shared on https://cssnewbie.com/10-beautiful-css-text-effects/#.XcTVBZNKjBL*/
   text-shadow:
     0 1px 0 #89ade0,
@@ -78,7 +83,7 @@ body{
     0 7px 7px rgba(0,0,0,.1),
     0 15px 15px rgba(0,0,0,.1);
 }
-/*same with the footer - I adjusted the proportions*/
+/*same with the footer - I adjusted the proportions for mobile*/
 .footer{
   position:static;
   height: 50px;
@@ -101,7 +106,7 @@ body{
   text-decoration: underline;
 }
 /*these link out to social media*/
-#fblogo{
+/* #fblogo{
   float:left;
   color: white;
   padding: 5px;
@@ -110,7 +115,7 @@ body{
   float:left;
   color:white;
   padding: 5px;
-}
+} */
 
 /*landing page*/
 /*adding in the flex! the margins are adjusted for mobile*/
@@ -316,6 +321,7 @@ body{
 
 /*making gallery grid(s)*/
 /*grid is 2 columns for mobile and tablet*/
+
 /*augmented photo gallery using pseudoclasses - was inspired by https://codepen.io/linux/pen/gxgWQy (by Omar Dsoky) and https://codepen.io/TiagoLopes/pen/vZBMWB (by Tiago Alexandre Lopes)*/
 .gallery img{
   box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
@@ -893,7 +899,7 @@ body{
     font-size:30px;
   }
 
-/*media query for reduced motion*/
+/*media query for reduced motion - also adapted from homework assignments*/
 @media screen and (prefers-reduced-motion: reduce){
   html{
       scroll-behavior: auto;
